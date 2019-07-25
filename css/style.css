@@ -1,8 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Nunito");
-@import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -12703,7 +12700,7 @@ h3 {
 
 body {
   background: #fff;
-  font-family: "PT Serif", serif;
+  font-family: "Nunito", sans-serif;
 }
 
 a {
@@ -12720,7 +12717,7 @@ a {
   padding: 0;
 }
 .header-main .logo {
-  border-bottom: 1px solid #f53e4a;
+  border-bottom: 1px solid #555;
   box-sizing: border-box;
   height: 46px;
   max-width: 230px;
@@ -12729,7 +12726,7 @@ a {
 .header-main .logo a {
   color: #fff;
   display: block;
-  font-family: "PT Serif", serif;
+  font-family: "Nunito", sans-serif;
   font-size: 17px;
   font-weight: 600;
   line-height: 46px;
@@ -12751,6 +12748,7 @@ a {
   z-index: 900;
 }
 .sidebar .user-panel {
+  border-bottom: 1px solid #444;
   padding: 10px;
 }
 .sidebar .user-panel img {
@@ -12782,17 +12780,32 @@ a {
   border-left: 3px solid transparent;
   color: #ddd;
   display: block;
-  font-size: 13px;
+  font-size: 13.5px;
   padding: 12px 5px 12px 15px;
 }
 .sidebar .sidebar-menu a i {
-  margin-right: 7px;
-}
-.sidebar .sidebar-menu a span {
-  margin-right: 8px;
+  font-size: 13px;
+  margin-right: 4px;
 }
 .sidebar .sidebar-menu a:hover {
   background: #1E282C;
+  border-left-color: #00A65A;
+}
+.sidebar .sidebar-menu .active {
+  border-left-color: #00A65A;
+}
+.sidebar .sidebar-menu .submenu {
+  display: none;
+  padding: 0;
+}
+.sidebar .sidebar-menu .submenu a {
+  background: #2C3B41;
+  margin-bottom: 1px;
+  padding: 5px 0 5px 26px;
+}
+.sidebar .sidebar-menu .submenu a:hover {
+  background: #2C3B41;
+  color: #fff;
 }
 
-/*# sourceMappingURL=backend.css.map */
+/*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-@import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 // Bootstrap
 @import 'bootstrap/bootstrap';
@@ -15,8 +15,10 @@
 
 $bg-color: #222D32;
 $bg-hover: #1E282C;
+$bg-submenu: #2C3B41;
+$bc-color: #00A65A;
 
-$main-font: 'PT Serif', serif;
+$main-font: 'Nunito', sans-serif;
 
 body {
 	background: #fff;
@@ -111,16 +113,38 @@ a {
 			border-left: 3px solid transparent;
 			color: #ddd;
 			display: block;
-			font-size: 13px;
+			font-size: 13.5px;
 			padding: 12px 5px 12px 15px;
 
 			i {
-				margin-right: 7px;
+				font-size: 13px;
+				margin-right: 4px;
 			}
 
 
 			&:hover {
 				background: $bg-hover;
+				border-left-color: $bc-color;
+			}
+		}
+
+		.active {
+			border-left-color: $bc-color;
+		}
+
+		.submenu {
+			display: none;
+			padding: 0;
+
+			a {
+				background: $bg-submenu;
+				margin-bottom: 1px;
+				padding: 5px 0 5px 26px;
+
+				&:hover {
+					background: $bg-submenu;
+					color: #fff;
+				}
 			}
 		}
 	}
