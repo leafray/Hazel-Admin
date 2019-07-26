@@ -12,15 +12,15 @@
 		</div> <!-- .user-panel -->
 
 		<ul class="sidebar-menu">
-			<li id="dashboard">
+			<li id="dashboard" class="active">
 				<a href="#">
 					<i class="fa fa-dashboard"></i>
-					<span>Dashboard</span>
-					<span class="float-right">
+					<span class="sm-title">Dashboard</span>
+					<span class="float-right sm-arrow">
 						<i class="fa fa-angle-down"></i>
 					</span>
 				</a>
-				<ul class="submenu">
+				<ul class="submenu subactivesd">
 					<li id="dashboard">
 						<a href="#">
 							<i class="fa fa-circle-o"></i>
@@ -35,8 +35,8 @@
 			<li id="admin">
 				<a href="#">
 					<i class="fa fa-user"></i>
-					<span>Admin</span>
-					<span class="float-right">
+					<span class="sm-title">Admin</span>
+					<span class="float-right sm-arrow">
 						<i class="fa fa-angle-down"></i>
 					</span>
 				</a>

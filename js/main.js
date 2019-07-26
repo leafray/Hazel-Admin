@@ -1,5 +1,12 @@
 $(function() {
 
+	// Sidebar Toggle
+	$('.sidebar-toggle').on('click', 'a', function(e) {
+		e.preventDefault();
+		
+		$('.sidebar').toggleClass('sidebar-sm');
+	});
+
 	// Submenu
 	$('.sidebar-menu').on('click', 'a', function(e) {
 		var $this = $(this);
