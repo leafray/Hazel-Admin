@@ -1,9 +1,14 @@
 $(function() {
 
-	// Sidebar Toggle
+	// Sidebar & Logo Toggle
 	$('.sidebar-toggle').on('click', 'a', function(e) {
 		e.preventDefault();
 		
+		// Logo
+		$('.large-logo').toggleClass('large-logo-hide');
+		$('.logo').toggleClass('mobile-logo').find('.mobile-logo-item').toggleClass('mobile-logo-item-show');
+
+		// Sidebar
 		$('.sidebar').toggleClass('sidebar-sm');
 	});
 
@@ -26,6 +31,9 @@ $(function() {
 			$this.parent().find('.submenu').slideToggle();
 
 		}
-	})
+	});
+
+	// Content
+	$('.content-wrapper').css({ 'min-height' : ( $(window).height() - 46 ) + 'px' });
 
 });

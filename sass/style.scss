@@ -30,6 +30,13 @@ $fontawesome: Fontawesome;
     transition: $params;
 }
 
+@mixin border-radius($topLeft, $topRight, $bottomLeft, $bottomRight) {
+	border-top-left-radius: $topLeft;
+	border-top-right-radius: $topRight;
+	border-bottom-left-radius: $bottomLeft;
+	border-bottom-right-radius: $bottomRight;
+}
+
 
 body {
 	background: #fff;
@@ -51,11 +58,12 @@ a {
 		padding: 0;
 	}
 
-	.logo{ 
+	.logo { 
 		border-bottom: 1px solid #555;
 		box-sizing: border-box;
 		height: 46px;
 		max-width: 230px;
+		@include transition(all .3s);
 		width: 100%;
 
 		a {
@@ -67,7 +75,34 @@ a {
 			line-height: 46px;
 			padding: 0 52px;
 			text-align: center;
+			@include transition(all .3s);
 		}
+
+		.large-logo-hide {
+			height: 0;
+			opacity: 0;
+			visibility: hidden;
+			@include transition(all .3s);
+		}
+
+		.mobile-logo-item {
+			height: 0;
+			opacity: 0;
+			padding: 0;
+			visibility: hidden;
+			@include transition(all .3s);
+		}
+
+		.mobile-logo-item-show {
+			opacity: 1;
+			visibility: visible;
+			@include transition(all .3s);
+		}
+	}
+
+	.mobile-logo {
+		max-width: 46px;
+		@include transition(all .3s);
 	}
 
 	// Siderbar Toggle
@@ -279,53 +314,48 @@ a {
 			display: block !important;
 		}
 	}
+}
 
-	// li {
-	// 	position: relative;
-		
 
-	// 	a {
-	// 		position: relative;
+// Main Content
+.content-wrapper {
+	background: #ECF0F5;
+	margin-left: 230px;
 
-	// 		.sm-title {
-	// 			background: $bg-submenu;
-	// 			border-bottom: 1px solid $bc-color;
-	// 			color: #fff;
-	// 			display: none;
-	// 			font-size: 15px;
-	// 			height: 34px;
-	// 			left: 43px;
-	// 			line-height: 34px;
-	// 			position: absolute;
-	// 			text-align: center;
-	// 			top: 0;
-	// 			width: 180px;
-	// 		}
+	.content-header {
+		padding: 15px 15px 0 15px;
 
-	// 		.sm-arrow {
-	// 			display: none;
-	// 		}
-	// 	}
+		.box-body {
+			@include border-radius(0, 0, 3px, 3px);
+			padding: 25px 20px;
+		}
 
-	// 	&:hover .sm-title {
-	// 		display: block !important;
-	// 	}
+		.box {
+			background: #fff;
+			border: 1px solid #eee;
+			border-radius: 3px;
+			box-shadow: 0 1px 1px rgba(0, 0, 0, .03);
+			margin-bottom: 20px;
+			position: relative;
+			width: 100%;
 
-	// 	.submenu {
-	// 		background: $bg-submenu;
-	// 		left: 46px;
-	// 		position: absolute;
-	// 		top: 34px;
-	// 		width: 180px !important;
+			h4 {
+				color: #444;
+				font-size: 18px;
+				line-height: 1.90;
+				margin-bottom: 0;
+			}
 
-	// 		a {
-	// 			padding-left: 12px !important;
-	// 		}
-	// 	}
-
-	// 	&:hover .submenu {
-	// 		display: block !important;
-	// 	}
-	// }
+			.btn {
+				border: 1px solid transparent;
+				border-radius: 4px;
+				font-size: 14px;
+				font-weight: 600;
+				line-height: 1.45;
+				margin-bottom: 0;
+				padding: 6px 12px;
+			}
+		}
+	}
 }
 

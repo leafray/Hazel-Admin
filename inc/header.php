@@ -1,7 +1,8 @@
 <header class="header-main">
 	<div class="container-fluid">
 		<div class="logo float-left">
-			<a href="#">Admin Hazel</a>
+			<a href="#" class="large-logo">Admin Hazel</a>
+			<a href="#" class="mobile-logo-item">H</a>
 		</div> <!-- .logo -->
 		
 		<div class="sidebar-toggle float-left">
