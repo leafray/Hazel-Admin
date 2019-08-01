@@ -184,19 +184,19 @@ a {
 		padding: 0;
 
 		li {
-			border-left: 3px solid transparent;
-
-			&:hover {
-				background: $bg-hover;
-				border-left-color: $bc-color;
-			}
 
 			a {
+				border-left: 3px solid transparent;
 				color: #ddd;
 				display: block;
 				font-size: 13.5px;
 				padding: 12px 5px 12px 15px;
 				width: 227px;
+
+				&:hover {
+					background: $bg-hover;
+					border-left-color: $bc-color;
+				}
 
 				i {
 					font-size: 13px;
@@ -211,6 +211,7 @@ a {
 
 				a {
 					background: $bg-submenu;
+					border-left: 0 !important;
 					line-height: 1.8;
 					margin-bottom: 1px;
 					padding: 5px 0 5px 26px;
@@ -228,7 +229,9 @@ a {
 		}
 
 		.active {
-			border-left-color: $bc-color;
+			a {
+				border-left-color: $bc-color;
+			}
 		}
 	}
 }
@@ -292,7 +295,7 @@ a {
 				
 				a {
 					padding-left: 12px !important;
-					width: 194px !important;
+					width: 196px !important;
 
 					i {
 						float: none !important;
@@ -320,22 +323,19 @@ a {
 // Main Content
 .content-wrapper {
 	background: #ECF0F5;
-	margin-left: 230px;
+	padding-left: 230px;
+	@include transition(all .3s);
 
 	.content-header {
 		padding: 15px 15px 0 15px;
 
-		.box-body {
-			@include border-radius(0, 0, 3px, 3px);
-			padding: 25px 20px;
-		}
-
 		.box {
 			background: #fff;
 			border: 1px solid #eee;
-			border-radius: 3px;
+			@include border-radius(0, 0, 3px, 3px);
 			box-shadow: 0 1px 1px rgba(0, 0, 0, .03);
 			margin-bottom: 20px;
+			padding: 25px 20px;
 			position: relative;
 			width: 100%;
 
@@ -357,5 +357,10 @@ a {
 			}
 		}
 	}
+}
+
+.sm-content-wrapper {
+	padding-left: 46px !important;
+	@include transition(all .3s);
 }
 

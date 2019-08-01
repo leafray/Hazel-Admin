@@ -1,7 +1,7 @@
-<section class="content-header">
+<section class="content-header" data-id="admin">
 	<div class="row">
 		<div class="col-12">
-			<div class="box box-body">
+			<div class="box">
 				<div class="row">
 					<div class="col-6">
 						<h4>
