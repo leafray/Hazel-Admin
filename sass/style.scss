@@ -54,11 +54,15 @@ a {
 	height: 46px;
 	z-index: 1000;
 
+	@media screen and (max-width: 575px) {
+		height: auto;
+	}
+
 	.container-fluid {
 		padding: 0;
 	}
 
-	.logo { 
+	.logo {
 		border-bottom: 1px solid #555;
 		box-sizing: border-box;
 		height: 46px;
@@ -78,11 +82,19 @@ a {
 			@include transition(all .3s);
 		}
 
-		.large-logo-hide {
-			height: 0;
-			opacity: 0;
-			visibility: hidden;
-			@include transition(all .3s);
+		@media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+			.large-logo-hide {
+				height: 0;
+				opacity: 0;
+				visibility: hidden;
+				@include transition(all .3s);
+			}
+
+			.mobile-logo-item-show {
+				opacity: 1;
+				visibility: visible;
+				@include transition(all .3s);
+			}
 		}
 
 		.mobile-logo-item {
@@ -91,18 +103,22 @@ a {
 			padding: 0;
 			visibility: hidden;
 			@include transition(all .3s);
-		}
-
-		.mobile-logo-item-show {
-			opacity: 1;
-			visibility: visible;
-			@include transition(all .3s);
+		
+			@media screen and (max-width: map-get($grid-breakpoints, 'sm')) {
+				display: none;
+			}
 		}
 	}
 
 	.mobile-logo {
 		max-width: 46px;
 		@include transition(all .3s);
+
+		@media screen and (max-width: map-get($grid-breakpoints, 'sm')) {
+			display: block;
+			float: none !important;
+			max-width: 100%;
+		}
 	}
 
 	// Siderbar Toggle
@@ -241,6 +257,11 @@ a {
 	width: 46px;
 	@include transition(width .3s);
 	
+	@media screen and (max-width: 575px) {
+		width: 0;
+		overflow: hidden;
+	}
+
 	.user-panel {
 		padding: 10px 0;
 		
@@ -335,25 +356,49 @@ a {
 			@include border-radius(0, 0, 3px, 3px);
 			box-shadow: 0 1px 1px rgba(0, 0, 0, .03);
 			margin-bottom: 20px;
-			padding: 25px 20px;
 			position: relative;
 			width: 100%;
 
-			h4 {
-				color: #444;
-				font-size: 18px;
-				line-height: 1.90;
-				margin-bottom: 0;
+			.box-header {
+				background: #00bcd4;
+				color: #fff;
+				margin-bottom: 10px;
+				padding: 4px 0 0 15px;
 			}
 
-			.btn {
-				border: 1px solid transparent;
-				border-radius: 4px;
-				font-size: 14px;
-				font-weight: 600;
-				line-height: 1.45;
-				margin-bottom: 0;
-				padding: 6px 12px;
+			.row {
+				padding: 25px 20px;
+
+				h4 {
+					color: #444;
+					font-size: 18px;
+					line-height: 1.90;
+					margin-bottom: 0;
+				}
+
+				.box-btn {
+					border: 1px solid transparent;
+					border-radius: 4px;
+					font-size: 14px;
+					font-weight: 600;
+					line-height: 1.45;
+					margin-bottom: 0;
+					padding: 6px 12px;
+
+					@media screen and (max-width: map-get($grid-breakpoints, 'sm')) {
+						display: block;
+						margin-top: 10px;
+					}
+				}
+
+				.form-group {
+					margin-bottom: 10px;
+
+					.form-control {
+						box-shadow: 0 0 0;
+						font-size: 14px;
+					}
+				}
 			}
 		}
 	}
@@ -362,5 +407,9 @@ a {
 .sm-content-wrapper {
 	padding-left: 46px !important;
 	@include transition(all .3s);
+
+	@media screen and (max-width: map-get($grid-breakpoints, 'sm')) {
+		padding-left: 0 !important;
+	}
 }
 
