@@ -54,5 +54,38 @@
             </form> 
       	
 		</div> <!-- .box-body -->
-	</div>
+	</div> <!-- .box -->
+
+	<div class="box">
+		<div class="box-header"></div>
+
+		<div class="box-body">
+			<div class="data-container">
+				<div class="datalist">
+					<div class="row">
+						<div class="col-12 col-sm-6">
+							<div class="datalist-label">
+								<label>
+									Show
+									<select name="example" aria-controls="example1" class="form-control">
+										<option value="10">10</option>
+										<option value="25">25</option>
+										<option value="50">50</option>
+										<option value="100">100</option>
+									</select> entries
+								</label>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6">
+							<div class="datalist-item">
+								<label>
+									<input type="search" class="form-control" placeholder="Search..." aria-controls="example1">
+								</label>
+							</div>
+						</div>
+					</div>
+				</div> <!-- .datalist -->
+			</div>	<!-- .data-container -->
+		</div>
+	</div> <!-- .box -->
 </section>

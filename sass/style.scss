@@ -400,6 +400,49 @@ a {
 					}
 				}
 			}
+
+			.datalist {
+				label {
+					font-size: 13px;
+
+					@media screen and (max-width: map-get($grid-breakpoints, 'sm'))  {
+						display: block;
+					}
+
+					.form-control {
+						box-shadow: 0 0 0;
+						display: inline-block;
+						font-size: 12px;
+						margin: 0 6px;
+						width: 75px;
+					}
+				}
+
+				.datalist-label {
+					text-align: left;
+
+					@media screen and (max-width: map-get($grid-breakpoints, 'sm'))  {
+						text-align: center;
+					}
+				}
+
+				.datalist-item {
+					text-align: right;
+
+					@media screen and (max-width: map-get($grid-breakpoints, 'sm'))  {
+						text-align: center;
+					}
+					
+					input {
+						font-size: 13px;
+						width: 250px;
+						
+						@media screen and (max-width: map-get($grid-breakpoints, 'sm'))  {
+							width: 100%;
+						}
+					}
+				}
+			}
 		}
 	}
 }
